@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes moveToCart {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(100vw - 50px), -100vh) scale(0.1);
+  }
+}
+
+.cart-animation {
+  position: absolute;
+  z-index: 1000;
+  animation: moveToCart 1s forwards;
+}
